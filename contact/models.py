@@ -47,7 +47,7 @@ class AssuntoReclamacao(models.Model):
 
     class Meta:
         verbose_name = "Assunto da Reclamação"
-        verbose_name_plural = "4- Assuntos da Reclamação"
+        verbose_name_plural = "3- Assuntos da Reclamação"
 
     def __str__(self):
         return self.nome
