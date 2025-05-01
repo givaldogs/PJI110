@@ -36,3 +36,5 @@ class SolicitacaoAdmin(admin.ModelAdmin):
     )
     search_fields = ('nome_morador', 'protocolo', 'documento')
     list_filter = ('status', 'assunto', 'data_hora')
+    ist_per_page = 10
+    list_max_show_all = 300
