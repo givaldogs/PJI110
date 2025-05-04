@@ -43,6 +43,26 @@ git add .
 git commit -m 'Mensagem'
 git remote add origin URL_DO_GIT
 
+# Resumo da Estrutura
+seu_projeto/
+│
+├── base_static/
+│   └── global/
+│       └── css/
+│           └── style.css
+│
+├── templates/
+│   └── contact/
+│       └── solicitar.html
+│
+├── contact/
+│   └── views/
+│       └── contact_views.py
+│
+├── manage.py
+└── settings.py
+
+
 
 
 
