@@ -84,20 +84,21 @@ a:hover {
 /* Centraliza o botão de envio */
 .button-container {
   text-align: center;
+  margin-top: 30px;
 }
 
 /* Estilo visual do botão de envio */
 .submit-button {
   background-color: #007BFF;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 25px; /* Ajuste no padding conforme solicitado */
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 30px;
 }
 
+/* Efeito de hover no botão */
 .submit-button:hover {
   background-color: #0056b3;
 }
