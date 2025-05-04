@@ -3,16 +3,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Solicitação</title>
     <link rel="stylesheet" href="{% static 'global/css/style.css' %}">
 </head>
 <body>
 <div class="form-container">
-    <h2>Solicitação de Atendimento</h2>
+    <h1>Solicitação de Atendimento</h1>
     <form method="post">
         {% csrf_token %}
-        
-        <!-- Exibir erros do formulário -->
+
         {% if form.errors %}
             <div class="error">
                 <ul class="errorlist">
@@ -24,26 +24,23 @@
                 </ul>
             </div>
         {% endif %}
-        
+
         <div class="row">
-            <!-- Coluna 1: Assunto -->
             <div class="col">
                 <label for="{{ form.assunto.id_for_label }}">Assunto</label>
                 <select name="assunto" id="{{ form.assunto.id_for_label }}">
-                    <option value="">Selecione o Assunto</option>  <!-- Opção padrão -->
+                    <option value="">Selecione o Assunto</option>
                     {% for assunto in assuntos %}
                         <option value="{{ assunto.id }}" {% if form.assunto.value == assunto.id %} selected {% endif %}>
                             {{ assunto.nome }}
                         </option>
                     {% endfor %}
                 </select>
-                <!-- Erro específico para o campo 'assunto' -->
                 {% if form.assunto.errors %}
                     <div class="error">{{ form.assunto.errors }}</div>
                 {% endif %}
             </div>
 
-            <!-- Coluna 2: Demais campos -->
             <div class="col">
                 <label for="{{ form.nome_morador.id_for_label }}">Nome</label>
                 {{ form.nome_morador }}
@@ -95,7 +92,10 @@
             </div>
         </div>
 
-        <button type="submit">Enviar Solicitação</button>
+        <!-- Botão centralizado -->
+        <div class="button-container">
+            <button type="submit" class="submit-button">Enviar Solicitação</button>
+        </div>
     </form>
 </div>
 </body>

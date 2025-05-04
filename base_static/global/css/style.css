@@ -1,5 +1,3 @@
-/* base_static/global/css/style.css */
-
 /* Estilos globais para o corpo */
 body {
   background: whitesmoke;
@@ -81,4 +79,45 @@ a {
 
 a:hover {
   background-color: #0056b3;
+}
+
+/* Centraliza o botão de envio */
+.button-container {
+  text-align: center;
+}
+
+/* Estilo visual do botão de envio */
+.submit-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 0 15px;
+  }
+
+  button,
+  .submit-button {
+    width: 100%;
+  }
 }
